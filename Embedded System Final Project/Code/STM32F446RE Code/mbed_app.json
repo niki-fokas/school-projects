@@ -1,0 +1,18 @@
+{
+    "config": {
+        "uart1_tx": {
+            "help": "UART1 TX pin",
+            "value": "NC"
+        },
+        "uart1_rx": {
+            "help": "UART1 RX pin",
+            "value": "NC"
+        }
+    },
+    "target_overrides": {
+        "K64F": {
+            "uart1_tx": "D5",
+            "uart1_rx": "D3"
+        }
+    }
+}
