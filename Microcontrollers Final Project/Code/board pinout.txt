@@ -1,0 +1,71 @@
+
+
+traffic board:
+porte 0-5 push buttons
+portc 4,5 traffic overide 
+portc 6,7 crosswalk button
+portb 7 segment code
+
+porta 2-7 traffic light 1
+
+NS
+	R - 4
+	Y - 3
+	G - 2
+	
+EW 
+	R - 7
+	Y - 6
+	G - 5
+
+Sequence light 1
+NSR -
+EWG - 0x30 
+
+NSR -
+EWY - 0x50
+
+NSG -
+EWR - 0x84
+
+NSY -
+EWR - 0x88
+
+NSR -
+EWR - 0x90
+
+portd 0-4,6,7 traffic light 2
+
+NS
+	R - 7
+	Y - 6
+	G - 3
+	
+EW 
+	R - 2
+	Y - 1
+	G - 0
+
+Sequence light 2
+NSR - 
+EWG - 0x81
+
+NSR -
+EWY - 0x82
+
+NSG -
+EWR - 0x0C
+
+NSY - 
+EWR - 0x44
+
+NSR -
+EWR - 0x84
+
+main board
+
+porb 0-3 field sensors
+portb 4 traffic light 1 force green
+portc 4,5 train input
+portd 0-3 lcd output
+porta 6,7 train output
